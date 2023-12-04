@@ -1,0 +1,52 @@
+  /* RESPONSIVE FOR MOBILES */
+  @media screen and (max-width: 768px) {
+      header {
+          height: 80px;
+      }
+
+      .logo1 img {
+          padding-left: 1px;
+          max-width: 100px;
+          max-height: 100px;
+      }
+
+      nav.header ul li a.buttons2::after {
+          top: 7px;
+          height: 70%;
+          right: -21px;
+      }
+
+      nav.header ul li:nth-child(4) a {
+          font-size: 16px;
+      }
+
+      nav.header ul li:last-child a {
+          margin-right: 1px;
+          margin-left: -3px;
+          font-size: 16px;
+      }
+
+      nav.header ul li a.buttons1 {
+          font-size: 14px;
+          padding: 5px 10px;
+      }
+
+      nav.header ul li:nth-child(3) a.buttons1 {
+          font-size: 14px;
+          padding: 5px 10px;
+          margin-right: 1px;
+      }
+
+      .slideshow-container {
+          padding-top: 140px;
+          max-width: 90%;
+      }
+
+      .slides img {
+          transform: translate(-4vw, -20%);
+      }
+
+      .bodyhomecontent h1{
+        font-size:25px;
+      }
+  }
