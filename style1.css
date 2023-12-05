@@ -5,6 +5,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -29,12 +30,12 @@ body {
 }
 
 header {
-    background-color: hwb(33 58% 0%);
+    background-color: white;
     position: fixed;
     padding: 10px;
     display: flex;
     align-items: center;
-    border-bottom: 20px solid rgb(255, 255, 255);
+    border-bottom: 20px solid orange;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     font-family: 'Exo 2', sans-serif;
     justify-content: space-between;
@@ -60,9 +61,12 @@ nav.header ul li a {
     text-decoration: none;
     display: inline-flex;
     position: relative;
+    cursor: pointer;
 }
 
 nav.header ul li a.buttons1 {
+    justify-content: center;
+    align-items: center;
     height: 40px;
     font-weight: bold;
     color: #ffffff;
@@ -72,7 +76,7 @@ nav.header ul li a.buttons1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 18px;
     align-items: center;
-    padding: 8px 30px;
+    padding: 1px 30px;
 }
 
 nav.header ul li a.buttons2 {
@@ -81,6 +85,8 @@ nav.header ul li a.buttons2 {
     font-size: 19px;
     align-items: center;
     position: relative;
+    text-align: center;
+
 }
 
 nav.header ul li a.buttons2::after {
@@ -93,6 +99,10 @@ nav.header ul li a.buttons2::after {
     background-color: #000000;
     transition: height 0.6s ease-in-out, top 0.6s ease-in-out,
         right 0.6s ease-in-out;
+}
+
+nav.header ul li:nth-child(5) a.buttons2::after {
+    display:none;
 }
 
 nav.header ul li:nth-child(1) a {
@@ -149,21 +159,33 @@ nav.header ul li a.buttons2:active {
     background-color: rgba(0, 0, 0, 0.273);
 }
 
-nav.header ul li a.buttons1:hover {
+nav.header ul li a.buttons1.on-specific-page {
     background-color: #ff963f;
     transform: translateY(-5px);
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-nav.header ul li a.buttons1:active {
+nav.header ul li a.buttons1.on-specific-page:hover {
+    background-color: #ff963f;
+    transform: translateY(-5px);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav.header ul li a.buttons1:hover {
     background-color: #b90000;
     transition: background-color 0.3s ease, box-shadow 0.2s ease-in-out,
         transform 0.2s ease-in-out;
     transform: translateY(-2px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
 }
 
-
+nav.header ul li a.buttons1:active {
+    background-color: #900000;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease-in-out,
+        transform 0.2s ease-in-out;
+    transform: translateY(1px);
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.8);
+}
 /* */
 
 footer {

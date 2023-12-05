@@ -5,36 +5,37 @@
       }
 
       .logo1 img {
-          padding-left: 1px;
-          max-width: 100px;
-          max-height: 100px;
+          padding-left: 0px;
+          max-width: 80px;
+          max-height: 80px;
       }
 
       nav.header ul li a.buttons2::after {
           top: 7px;
           height: 70%;
-          right: -21px;
+          right: -10.5px;
       }
 
       nav.header ul li:nth-child(4) a {
-          font-size: 16px;
+          font-size: 14px;
+          margin-right: -10px;
       }
 
       nav.header ul li:last-child a {
           margin-right: 1px;
-          margin-left: -3px;
-          font-size: 16px;
+          margin-left: -5px;
+          font-size: 14px;
       }
 
       nav.header ul li a.buttons1 {
-          font-size: 14px;
-          padding: 5px 10px;
+          font-size: 12px;
+          padding: 0px 9px;
       }
 
       nav.header ul li:nth-child(3) a.buttons1 {
-          font-size: 14px;
-          padding: 5px 10px;
-          margin-right: 1px;
+          font-size: 12px;
+          padding: 0px 9px;
+          margin-right: -12px;
       }
 
       .slideshow-container {
@@ -47,6 +48,6 @@
       }
 
       .bodyhomecontent h1{
-        font-size:25px;
+        font-size:20px;
       }
   }
