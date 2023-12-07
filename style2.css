@@ -5,18 +5,21 @@
   font-style: normal;
 }
 
+.content{
+  width: 100vw;
+}
 
 .slideshow-container {
   display: flex;
   max-width: 60%;
-  padding-top: 160px;
+  padding-top: 60px;
   position: relative;
   margin: 0 auto;
   font-family: 'Exo 2', sans-serif;
   overflow: hidden;
   height: 500px;
-  transition: padding-top 0.6s ease-in-out, max-width 0.6s ease-in-out;
   white-space: nowrap;
+  transition: max-width 0.6s ease-in-out;
 }
 
 .text1 {
@@ -142,10 +145,11 @@
   word-wrap: break-word;
 }
 
-.bodyhome .bodyhomecontent p {
+.bodyhome .bodyhomecontent h2 {
   margin-top: 5px;
   font-size: 18px;
   font-weight: bold;
+  transition: font-size 0.6s ease-in-out;
 }
 
 .bodyhome .bodyhomecontent {
@@ -196,6 +200,7 @@
   display: flex;
   width: 500px;
   height: 500px;
+  transform-origin: top;
 }
 
 .deliveryexclusive2 {

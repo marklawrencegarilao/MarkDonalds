@@ -1,7 +1,16 @@
 .menucontent {
-  padding-top: 160px;
-  display: flex;
-  flex-direction: column;
+  display: block;
   justify-content: space-around;
+  align-items: center;
+  height: 1000px;
+  margin: 50px;
+  padding-top: 10px;
+}
 
+.menuarea{
+  margin: 5px;
+  height: 500px;
+  width: 100%;
+  border: 5px solid orange;
+  border-radius: 50px;
 }
