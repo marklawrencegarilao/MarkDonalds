@@ -1,60 +1,49 @@
 
 function initSlideshow() {
-$('.slides').slick({
-    slidesToShow: 1,
-    autoplay: true,
-    pauseOnHover: false,
-    pauseOnFocus: false,
-    autoplaySpeed: 600,
-    speed: 2000
-});
+    $('.slides').slick({
+        slidesToShow: 1,
+        autoplay: true,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        autoplaySpeed: 600,
+        speed: 2000
+    });
 
-$('.imagede').slick({
-    centerMode: true,
-    centerPadding: '100vw',
-    autoplay: true,
-    autoplaySpeed: 2000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: true,
-    speed: 1000,
-    arrows: false,
-    pauseOnHover: false,
-    pauseOnFocus: false,
-    
-})
+    $('.imagede').slick({
+        centerMode: true,
+        centerPadding: '100vw',
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        speed: 1000,
+        arrows: false,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+
+    })
 }
 
 initSlideshow()
 
-/* */
 
-const currentPage = window.location.href;
+document.addEventListener('DOMContentLoaded', function() {
+const sections = document.querySelectorAll('#mainContent > section');
+const buttons = document.querySelectorAll('.buttons1');
 
-// Check if the URL ends with "home.html"
-if (currentPage.endsWith("index.html")) {
-    // Find the first child of elements with class .buttons1 and add the class .on-specific-page
-    const buttons = document.querySelectorAll('.buttons1');
-    if (buttons.length > 0) {
-        buttons[0].classList.add('on-specific-page');
-    }
+if (buttons.length > 0) {
+    sections.forEach((section, index) => {
+        if (section.id === 'home' && index < buttons.length) {
+            buttons[0].classList.add('on-specific-page');
+        } else if (section.id === 'menu' && index < buttons.length) {
+            buttons[1].classList.add('on-specific-page');
+        } else if (section.id === 'about' && index < buttons.length) {
+            buttons[2].classList.add('on-specific-page');
+        }
+    });
 }
-
-if (currentPage.endsWith("menu.html")) {
-    // Find the first child of elements with class .buttons1 and add the class .on-specific-page
-    const buttons = document.querySelectorAll('.buttons1');
-    if (buttons.length > 0) {
-        buttons[1].classList.add('on-specific-page');
-    }
-}
-
-if (currentPage.endsWith("about.html")) {
-    // Find the first child of elements with class .buttons1 and add the class .on-specific-page
-    const buttons = document.querySelectorAll('.buttons1');
-    if (buttons.length > 0) {
-        buttons[2].classList.add('on-specific-page');
-    }
-}
+});
 
 
 
@@ -62,29 +51,36 @@ if (currentPage.endsWith("about.html")) {
 
 
 
-  document.addEventListener('DOMContentLoaded', function() {
+
+
+document.addEventListener('DOMContentLoaded', function () {
     const headerBtn = document.querySelector('.headerdropbtn');
     const dropMenu = document.querySelector('.headerdropbuttons');
-    const overlay = document.createElement('div'); // Create an overlay element
+    const overlay = document.createElement('div');
 
     overlay.style.position = 'fixed';
     overlay.style.top = '0';
     overlay.style.left = '0';
     overlay.style.width = '100%';
     overlay.style.height = '100%';
-    overlay.style.backgroundColor = 'rgba(255, 255, 255, 0.5)'; // Semi-transparent white
-    overlay.style.display = 'none'; // Initially hidden
-    overlay.style.zIndex = '500';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+    overlay.style.display = 'none';
+    overlay.style.zIndex = '501';
+    dropMenu.style.left = '-500px';
 
-    document.body.appendChild(overlay); // Append the overlay to the document body
+    setTimeout(function() {
+        dropMenu.style.left = '-220px';
+      }, 2000);
 
-    headerBtn.addEventListener('click', function() {
-        if (dropMenu.style.left === '-220px') {
+    document.body.appendChild(overlay);
+
+    headerBtn.addEventListener('click', function () {
+        if (parseInt(dropMenu.style.left) <= -220) {
             dropMenu.style.left = '-20px';
-            overlay.style.display = 'block'; // Show the overlay when the menu pops up
+            overlay.style.display = 'block';
         } else {
             dropMenu.style.left = '-220px';
-            overlay.style.display = 'none'; // Hide the overlay when the menu closes
+            overlay.style.display = 'none';
         }
     });
 });

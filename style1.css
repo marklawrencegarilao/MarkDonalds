@@ -5,38 +5,40 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    max-width: 100vw;
+    overflow-y: hidden;
 }
 
 body {
     background-color: #ffffff88;
     min-height: 100vh;
-    max-width: 100vw;
+    width: 100vw;
 }
 
-/* Targeting the scrollbar */
 ::-webkit-scrollbar {
-    width: 10px; /* Width of the scrollbar */
+    width: 8px;
   }
   
-  /* Track (the area along which the thumb slides) */
   ::-webkit-scrollbar-track {
-    background: orange; /* Color of the track */
+    background: orange; 
   }
   
-  /* Handle (the draggable scrolling element) */
   ::-webkit-scrollbar-thumb {
-    background: #c50000; /* Color of the thumb */
-    border-radius: 5px; /* Rounded corners for the thumb */
+    background: #c50000; 
+    border-radius: 5px; 
   }
   
-  /* Handle on hover */
+
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(255, 0, 0) /* Color of the thumb on hover */
+    background: rgb(255, 0, 0) 
   }
 
+.headercontent{
+    width: 100vw;
+}
+
 .logo1 img {
-    padding-left: 10px;
+    margin-left: 10px;
     max-width: 120px;
     max-height: 120px;
 }
@@ -63,7 +65,7 @@ header {
     z-index: 1000;
     font-family: 'Exo 2', sans-serif;
     width: 100vw;
-    height: 120px;
+    height: 140px;
 }
 
 .headerdropdown {
@@ -71,11 +73,11 @@ header {
 }
 
 .headeritems {
-    padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    height: 140px;
+    width: 100vw;
     margin-left: 50px;
     margin-right: 50px;
     transition: margin-left 0.6s ease-in-out, margin-right 0.6s ease-in-out;
@@ -174,7 +176,7 @@ nav.headerbuttons ul li:nth-child(4) a {
 }
 
 nav.headerbuttons ul li:last-child a {
-    margin-right: 10px;
+    margin-right: 0px;
     margin-left: 20px;
     border-left: 10px solid rgba(0, 0, 0, 0);
     border-right: 10px solid rgba(0, 0, 0, 0);
@@ -229,22 +231,22 @@ nav.headerbuttons ul li a.buttons1:active {
 
 footer {
     margin-top: auto;
-    padding: 20px;
     background-color: hwb(0 74% 26%);
-    position: absolute;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 1px 8px rgba(255, 255, 255, 0.5);
     font-family: 'Exo 2', sans-serif;
-    z-index: 999;
+    z-index: 500;
     width: 100vw;
-    flex-wrap: wrap;
+    height: 300px;
 }
 
 .logo2 img {
     max-width: 120px;
     max-height: 120px;
+    margin-left: 20px;
 }
 
 footer nav ul li{

@@ -1,5 +1,15 @@
   /* RESPONSIVE FOR MOBILES */
   @media screen and (max-width: 768px) {
+    body {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer and Edge */
+      }
+    
+      /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+      body::-webkit-scrollbar {
+        display: none;
+      }
+
       header {
           height: 100px;
           position: relative;
@@ -31,7 +41,7 @@
       .headerdropbuttons {
           position: absolute;
           transform: translateY(-70px);
-          left: -220px;
+          left: -500px;
           width: 200px;
           background-color: #fff;
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -93,7 +103,7 @@
 
       .slideshow-container {
           padding-top: 40px;
-          max-width: 90%;
+          max-width: 95%;
       }
 
       .text1 {
@@ -114,6 +124,7 @@
 
       .imagede div {
           transform: scale(0.85);
+          right: -12px;
           margin-right: 0px;
           margin-left: 0px;
       }
