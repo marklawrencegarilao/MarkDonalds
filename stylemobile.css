@@ -22,20 +22,17 @@
 
       .headerdropdown {
           position: relative;
-          display: inline-block;
+          display: flex;
       }
 
       .headerdrpsymb {
           font-size: 24px;
-          padding: 10px 20px;
-      }
-
-      .headerdrpsymb {
+          padding: 18px 20px;
           position: relative;
           z-index: 1001;
           cursor: pointer;
           transition: background-color 0.1s ease-in-out;
-          color: #fff;
+          color: orange;
       }
 
       .headerdropbuttons {
@@ -83,6 +80,77 @@
           background-color: rgba(255, 255, 255, 0.2);
       }
 
+      .account{
+        position: absolute;
+        display: block;
+        justify-content: right;
+        align-items: center;
+        order: 3;
+        z-index: 999;
+        right: 0px;
+        }
+        
+
+      .accountlogo{
+        display: flex;
+        order: 3;
+        z-index: 1000;
+        width: 50px;
+        height: 50px;
+        padding: 10px 10px;
+        margin: 5px;
+        cursor: pointer;
+      }
+
+      .accountlogo:active {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .accdropbuttons {
+        position: absolute;
+          transform: translateY(-70px);
+          left: -230px;
+          width: 200px;
+          background-color: #fff;
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+          transition: left 0.3s ease;
+          z-index: 999;
+          padding: 150px 0px 0px 10px;
+          list-style-type: none;
+          margin: 0px;
+    }
+
+    .accdropbuttons li {
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    .accdropbuttons li:last-child {
+        padding: 0px 0px 30px 0px;
+    }
+
+    .accdropbuttons a {
+        text-decoration: none;
+        text-align: left;
+        font-size: 20px;
+        color: black;
+        display: block;
+        padding: 8px 20px;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .accdropbuttons a:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .accdropbuttons a:active {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .accdropbtn .headerdrpsymb:active {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
       .logo1 img {
           max-width: 80px;
           max-height: 80px;
@@ -124,9 +192,14 @@
 
       .imagede div {
           transform: scale(0.85);
-          right: -12px;
+          right: -16px;
           margin-right: 0px;
           margin-left: 0px;
+      }
+
+      .signupFormBox,
+      .loginFormBox{
+        width: 70vw;
       }
   }
 
@@ -157,5 +230,21 @@
       .bodyhome .bodyhomecontent h2 {
           font-size: 14px;
       }
+
+      .signupFormBox,
+      .loginFormBox{
+        width: 90vw;
+      }
+
+      .loginContents,
+      .signupContents{
+transform: scale(0.8);
+      }
+
+      .signupFinalContents{
+        transform: scale(0.7);
+        flex-wrap: nowrap;
+              }
+        
 
   }

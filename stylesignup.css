@@ -1,0 +1,294 @@
+.signupcontent {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+  width: 100%;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.signupFormBox{
+  position: relative;
+  display: flex;
+  top: 20px;
+  flex-direction: column;
+  height:400px;
+  width: 700px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 8px;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
+}
+
+.signupContents,
+.signupFinalContents{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+#signupForm input{
+  margin: 10px;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 2px solid #dadada;
+  background-color: #dadada;
+  font-size: 16px;
+  transition: border 0.2s ease-in-out;
+}
+
+#signupForm input:focus {
+  outline: none;
+  border: 2px solid orange;
+}
+
+.showPass {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 200px;
+  height: 50px;
+}
+
+/* Hide the actual checkbox */
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  /* Adjust the z-index and size to properly cover the custom checkbox */
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  cursor: default;
+}
+
+/* Style the label as a custom checkbox */
+.show-password-label {
+  position: relative;
+  padding-right: 30px; /* Space for the 'checkbox' */
+}
+
+/* Create a custom checkbox design using pseudo-elements */
+.show-password-label::before {
+  content: '';
+  cursor: pointer;
+  position: absolute;
+  top: 2px;
+  right: 0; /* Align the custom checkbox to the right */
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgb(197, 0, 0);
+  background-color: orange;
+  border-radius: 3px;
+}
+
+.show-password-label::after {
+  content: '\2713';
+  cursor: pointer;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 60%;
+  right: 5px; /* Adjust the position of the checkmark */
+  transform: translateY(-50%);
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+
+input[type="checkbox"]:checked + .show-password-label::before {
+  background-color: orange;
+  border-color: rgb(197, 0, 0);
+}
+
+input[type="checkbox"]:checked + .show-password-label::after {
+  opacity: 1;
+}
+
+#signupForm button {
+  cursor: pointer;
+  height: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(197, 0, 0);
+    border: 0px;
+    border-radius: 8px;
+    font-size: 18px;
+    align-items: center;
+    padding: 1px 30px;
+    margin: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#signupForm button:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+#signupForm button:active {
+  background-color: rgb(125, 0, 0);
+}
+
+#signupFormAlert {
+color: red;
+display: none;
+}
+
+#signupFormFinalAlert {
+  color: red;
+  display: none;
+  }
+
+/* */
+
+#signupFormFinal{
+  display: none;
+}
+
+#signupFormFinal input {
+  position: relative;
+  width: 250px;
+  margin: 10px;
+  margin-left: 10px;
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: 2px solid #dadada;
+  background-color: #dadada;
+  font-size: 16px;
+  transition: border 0.2s ease-in-out;
+}
+
+#signupFormFinal div.signupPhoneNum {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border: 2px solid #dadada;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+#signupFormFinal input#phoneNumber {
+  width: 220px;
+  margin: 0px;
+  border-radius: 0px;
+  border: 2px solid #dadada;
+  transition: border 0.2s ease-in-out;
+  vertical-align: middle;
+}
+
+#signupFormFinal input#phoneNumber:focus {
+  width: 220px;
+  margin: 0px;
+  border-radius: 0px;
+  border: 2px solid orange;
+}
+
+#signupFormFinal div.signupPhoneNum span {
+  display: flex;
+  position: relative;
+  flex-wrap: nowrap;
+  width: 40px;
+  height: 30px;
+  font-size: 16px;
+  transform: translate(8px,-2px);
+  align-items: center;
+  text-align: center;
+}
+
+#signupFormFinal div.signupPrCity{
+  display: flex;
+  position: relative;
+  flex-wrap: nowrap;
+}
+
+#signupFormFinal div.signupPrCity input{
+  width: 110px;
+  align-items: center;
+}
+
+
+#signupFormFinal button {
+  cursor: pointer;
+  height: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(197, 0, 0);
+    border: 0px;
+    border-radius: 8px;
+    font-size: 18px;
+    align-items: center;
+    padding: 1px 30px;
+    margin: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#signupFormFinal button:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+#signupFormFinal button:active {
+  background-color: rgb(125, 0, 0);
+}
+
+#signupFormFinal input:focus {
+  outline: none;
+  border: 2px solid orange;
+}
+
+/* */
+
+/* Custom Alert Box CSS */
+.custom-alert {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: 2px solid orange;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 8px;
+  z-index: 2001;
+  padding: 50px;
+  border-radius: 30px;
+}
+
+.custom-alert-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: -50px;
+  right: -30px;
+  font-size: 40px;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+#alertMessage {
+  text-align: center;
+  position: relative;
+  width: 200px;
+}
+
+.close-btn:hover {
+  position: absolute;
+  top: -50px;
+  right: -30px;
+  font-size: 40px;
+  color: gray;
+  cursor: pointer;
+}

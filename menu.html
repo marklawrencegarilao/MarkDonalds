@@ -32,7 +32,15 @@
                     <ul class="headerdropbuttons">
                         <li><a class="dropdownbtns" href="index.html">Home</a></li>
                         <li><a class="dropdownbtns" href="menu.html">Menu</a></li>
-                        <li> <a class="dropdownbtns" href="about.html">About</a></li>
+                        <li><a class="dropdownbtns" href="about.html">About</a></li>
+                    </ul>
+                    <ul class="accdropbuttons notLoggedIn">
+                        <li><a class="dropdownaccbtns" href="login.html">Log In</a></li>
+                        <li><a class="dropdownaccbtns" href="signup.html">Sign Up</a></li>
+                    </ul>
+                    <ul class="accdropbuttons loggedIn">
+                        <li><a class="dropdownaccbtns" href="index.html">Profile</a></li>
+                        <li><a class="dropdownaccbtns" onclick="handleLogOut">Log out</a></li>
                     </ul>
                 </nav>
             </div>
@@ -41,10 +49,11 @@
                     <li><a class="buttons1" href="index.html">Home</a></li>
                     <li><a class="buttons1" href="menu.html">Menu</a></li>
                     <li><a class="buttons1" href="about.html">About</a></li>
-                    <li><a class="buttons2">Log In</a></li>
-                    <li><a class="buttons2">Sign Up</a></li>
+                    <li><a class="buttons2" href="login.html">Log In</a></li>
+                    <li><a class="buttons2" href="signup.html">Sign Up</a></li>
                 </ul>
             </nav>
+            <img class="accountlogo" src="account.png">
         </div>
     </header>
     
@@ -70,12 +79,16 @@
                 <li><a href="#">Privacy Policy</a></li>
             </ul>
         </nav>
+        <div class="filler"></div>
     </footer>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.4.1.js"
+        integrity="sha256-CfQXwuZDtzbBnpa5nhZmga8QAumxkrhOToWweU52T38=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>

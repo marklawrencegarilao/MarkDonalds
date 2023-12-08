@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style1.css">
-    <link rel="stylesheet" href="stylehome.css">
+    <link rel="stylesheet" href="stylesignup.css">
     <link rel="stylesheet" href="stylemobile.css">
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
@@ -20,6 +19,7 @@
 </head>
 
 <body>
+
     <header id="headerContent">
         <div class="headerbackground"></div>
         <div class="headeritems">
@@ -34,11 +34,11 @@
                         <li><a class="dropdownbtns" href="menu.html">Menu</a></li>
                         <li><a class="dropdownbtns" href="about.html">About</a></li>
                     </ul>
-                    <ul class="accdropbuttons" id="notLoggedIn">
+                    <ul class="accdropbuttons notLoggedIn">
                         <li><a class="dropdownaccbtns" href="login.html">Log In</a></li>
                         <li><a class="dropdownaccbtns" href="signup.html">Sign Up</a></li>
                     </ul>
-                    <ul class="accdropbuttons" id="loggedIn">
+                    <ul class="accdropbuttons loggedIn">
                         <li><a class="dropdownaccbtns" href="index.html">Profile</a></li>
                         <li><a class="dropdownaccbtns" onclick="handleLogOut">Log out</a></li>
                     </ul>
@@ -58,64 +58,44 @@
     </header>
 
     <main id="mainContent">
-        <section id="home">
-            <div class="content">
-                <div class="slideshow-container">
-                    <div class="slides">
-                        <img src="image1.jpg" alt="Image 1">
-                        <img src="image2.jpg" alt="Image 2">
-                        <img src="image3.jpg" alt="Image 3">
-                        <img src="image4.jpg" alt="Image 4">
-                        <img src="image5.jpg" alt="Image 5">
-                        <img src="image6.jpg" alt="Image 6">
-                        <img src="image7.jpg" alt="Image 7">
+        <section id="signup">
+            <div class="signupcontent">
+                <form id="signupForm" class="signupFormBox">
+                    <div class="signupContents">
+                    <input type="text" id="username" placeholder="Username">
+                    <input type="password" id="password" placeholder="Password">
+                    <div class="showPass">
+                        <input type="checkbox" id="showPassword">
+                        <label for="showPassword" class="show-password-label">Show Password</label>
                     </div>
-                    <div class="overpicture1">
-                        <div class="text1">
-                            <h2>Hungry?</h2>
-                            <p>MARK your Order!</p>
-                            <a class="order1">ORDER NOW</a>
-                        </div>
+                    <button id="signupButton" type="submit">Sign Up</button>
+                    <span id="signupFormAlert">Please fill in all fields.</span></div>
+                </form>
+                <form id="signupFormFinal" class="signupFormBox">
+                    <div class="signupFinalContents">
+                    <input type="text" id="firstName" placeholder="First Name">
+                    <input type="text" id="lastName" placeholder="Last Name">
+                    <div class="signupPhoneNum">
+                        <span>+63</span>
+                        <input type="tel" id="phoneNumber" placeholder="Phone Number" pattern="[0-9]{10}">
                     </div>
-                </div>
-                <div class="bodyhome">
-                    <div class="division-line"></div>
-                    <div class="bodyhomecontent">
-                        <h1>Welcome to MarkDonald's delivery!</h1>
-                        <h2>Try our delivery exclusives!</h2>
-                        <div class="slideshow-container1">
-                            <div class="imagede" id="imagelist">
-                                <div>
-                                    <span class="deliveryexclusive2">Triple Chicken Cheese Burger, Fries and Coke
-                                        meal</span>
-                                    <a class="deliveryexclusive" href="#">ORDER</a>
-                                    <span class="deliveryexclusive1">₱279</span>
-                                    <img class="imagede1" src="imagede1.jpg" alt="Image 1">
-                                </div>
-                                <div>
-                                    <span class="deliveryexclusive2">Triple Cheese Burger Burrito Wrap, Fries and Coke
-                                        meal</span>
-                                    <a class="deliveryexclusive" href="#">ORDER</a>
-                                    <span class="deliveryexclusive1">₱275</span>
-                                    <img class="imagede2" src="imagede2.jpg" alt="Image 2">
-                                </div>
-                                <div>
-                                    <span class="deliveryexclusive2">Poutine Bowl with 3 Coffee Float</span>
-                                    <a class="deliveryexclusive" href="#">ORDER</a>
-                                    <span class="deliveryexclusive1">₱269</span>
-                                    <img class="imagede3" src="imagede3.jpg" alt="Image 3">
-                                </div>
-                                <div>
-                                    <span class="deliveryexclusive2">Fried Shrimp Bites with 2 Chicken Cheese Burger and
-                                        Coke meal</span>
-                                    <a class="deliveryexclusive" href="#">ORDER</a>
-                                    <span class="deliveryexclusive1">₱255</span>
-                                    <img class="imagede4" src="imagede4.jpg" alt="Image 4">
-                                </div>
-                            </div>
-                        </div>
+                    <div class="signupPrCity">
+                        <input type="text" id="province" placeholder="Province">
+                        <input type="text" id="city" placeholder="City">
+                    </div>
+                    <input type="text" id="address" placeholder="Address">
+                    <button id="completeSignupButton" type="submit">Sign Up</button>
+                    <span id="signupFormFinalAlert">Please fill in all fields.</span></div>
+                </form>
+
+                <div class="custom-alert" id="signupAlert">
+                    <div class="custom-alert-content">
+                        <span class="close-btn" onclick="closeAlert()">&times;</span>
+                        <p id="alertMessage">Sign Up Successful</p>
                     </div>
                 </div>
+
+            </div>
         </section>
     </main>
 
@@ -141,6 +121,8 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script src="script.js"></script>
+    <script src="signup.js"></script>
+</body>
 </body>
 
 </html>

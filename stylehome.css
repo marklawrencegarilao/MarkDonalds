@@ -6,7 +6,7 @@
 }
 
 .content {
-  width: auto;
+  width: 100%;
   height: auto;
 }
 
@@ -25,7 +25,7 @@
 
 .text1 {
   position: absolute;
-  top: 50%;
+  top: 230px;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -110,7 +110,9 @@
 }
 
 .division-line {
-  width: 100vw;
+  position: relative;
+  display: inline;
+  width: 100%;
   height: 40px;
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 8px;
@@ -119,6 +121,7 @@
 
 .bodyhome {
   margin-top: 20px;
+  width: 100%;
   display: block;
   overflow: hidden;
   background-color: rgb(236, 236, 236);
@@ -154,7 +157,7 @@
   justify-content: center;
   align-items: center;
   height: 800px;
-  width: 100vw;
+  width: 100%;
 }
 
 .slideshow-container1 {
@@ -163,7 +166,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   margin-top: 10px;
   height: 500px;
 }
