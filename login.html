@@ -20,47 +20,12 @@
 
 <body>
 
-    <header id="headerContent">
-        <div class="headerbackground"></div>
-        <div class="headeritems">
-            <div class="logo1">
-                <img src="logo1.png">
-            </div>
-            <div class="headerdropdown">
-                <nav class="headerdropbtn">
-                    <span class="headerdrpsymb">&#9776;</span>
-                    <ul class="headerdropbuttons">
-                        <li><a class="dropdownbtns" href="index.html">Home</a></li>
-                        <li><a class="dropdownbtns" href="menu.html">Menu</a></li>
-                        <li><a class="dropdownbtns" href="about.html">About</a></li>
-                    </ul>
-                    <ul class="accdropbuttons notLoggedIn">
-                        <li><a class="dropdownaccbtns" href="login.html">Log In</a></li>
-                        <li><a class="dropdownaccbtns" href="signup.html">Sign Up</a></li>
-                    </ul>
-                    <ul class="accdropbuttons loggedIn">
-                        <li><a class="dropdownaccbtns" href="index.html">Profile</a></li>
-                        <li><a class="dropdownaccbtns" onclick="handleLogOut">Log out</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <nav class="headerbuttons">
-                <ul>
-                    <li><a class="buttons1" href="index.html">Home</a></li>
-                    <li><a class="buttons1" href="menu.html">Menu</a></li>
-                    <li><a class="buttons1" href="about.html">About</a></li>
-                    <li><a class="buttons2" href="login.html">Log In</a></li>
-                    <li><a class="buttons2" href="signup.html">Sign Up</a></li>
-                </ul>
-            </nav>
-            <img class="accountlogo" src="account.png">
-        </div>
-    </header>
+    
 
     <main id="mainContent">
         <section id="login">
             <div class="logincontent">
-                    <form id="loginForm" class="loginFormBox">
+                    <form id="loginForm" class="loginFormBox" action="#">
                         <div class="loginContents">
                         <input type="text" id="usernameInputId" placeholder="Username">
                         <input type="password" id="passwordInputId" placeholder="Password">
@@ -74,13 +39,13 @@
                     </form>
                 <div class="custom-alert" id="loginAlert">
                     <div class="custom-alert-content">
-                        <span class="close-btn" onclick="closeLoginAlert()">&times;</span>
+                        <span class="close-btn" id="closebtn">&times;</span>
                         <p id="loginAlertMessage">Log in Successful.</p>
                     </div>
                 </div>
                 <div class="custom-alert" id="failedLoginAlert">
                     <div class="custom-alert-content">
-                        <span class="close-btn" onclick="closeFailedLoginAlert()">&times;</span>
+                        <span class="close-btn" id="closefailedbtn">&times;</span>
                         <p id="failedLoginAlertMessage">Incorrect username or password.</p>
                     </div>
                 </div>
@@ -88,20 +53,7 @@
         </section>
     </main>
 
-    <footer id="footerContent">
-        <div class="logo2">
-            <img src="logo2.png" alt="Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Terms and Conditions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-            </ul>
-        </nav>
-        <div class="filler"></div>
-    </footer>
+   
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>

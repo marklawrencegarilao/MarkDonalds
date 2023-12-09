@@ -106,7 +106,8 @@
         background-color: rgba(255, 255, 255, 0.2);
     }
 
-    .accdropbuttons {
+    .accdropbuttons,
+    .accdropbuttons1 {
         position: absolute;
           transform: translateY(-70px);
           left: -230px;
@@ -120,16 +121,27 @@
           margin: 0px;
     }
 
-    .accdropbuttons li {
+    #loggedIn{
+        display: none;
+    }
+
+    #notLoggedIn{
+        display: block;
+    }
+
+    .accdropbuttons li,
+    .accdropbuttons1 li {
         cursor: pointer;
         margin: 10px;
     }
 
-    .accdropbuttons li:last-child {
+    .accdropbuttons li:last-child,
+    .accdropbuttons1 li:last-child {
         padding: 0px 0px 30px 0px;
     }
 
-    .accdropbuttons a {
+    .accdropbuttons a,
+    .accdropbuttons1 a{
         text-decoration: none;
         text-align: left;
         font-size: 20px;
@@ -139,11 +151,13 @@
         transition: background-color 0.2s ease-in-out;
     }
 
-    .accdropbuttons a:hover {
+    .accdropbuttons a:hover,
+    .accdropbuttons1 a:hover {
         background-color: rgba(0, 0, 0, 0.1);
     }
 
-    .accdropbuttons a:active {
+    .accdropbuttons a:active,
+    .accdropbuttons1 a:active {
         background-color: rgba(0, 0, 0, 0.2);
     }
 
@@ -201,6 +215,32 @@
       .loginFormBox{
         width: 70vw;
       }
+
+      .custom-alert {
+        padding: 50px 0px;
+      }
+
+      .close-btn {
+        top: -55px;
+        right: 12px;
+        font-size: 40px;
+        transition: color 0.2s ease-in-out;
+      }
+
+      .close-btn:hover {
+        top: -55px;
+        right: 12px;
+        font-size: 40px;
+        color: gray;
+      }
+      
+
+      #loginAlertMessage,
+#failedLoginAlertMessage {
+  text-align: center;
+  position: relative;
+  width: 200px;
+}
   }
 
   @media screen and (max-width: 900px) {
