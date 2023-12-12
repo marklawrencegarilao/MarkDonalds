@@ -119,6 +119,8 @@
           padding: 150px 0px 0px 10px;
           list-style-type: none;
           margin: 0px;
+          display: flex;
+          flex-direction: column;
     }
 
     #loggedIn{
