@@ -300,7 +300,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const logOutButton = document.querySelector('.logOutButton');
 
     notLoggedInElements.forEach(element => {
-        if (isLoggedIn) {
+        if (!isLoggedIn) {
+            element.style.display = 'flex';
+        } else if (isLoggedIn) {
             element.style.display = 'none';
         }
     });
@@ -308,6 +310,8 @@ document.addEventListener("DOMContentLoaded", function () {
     loggedInElements.forEach(element => {
         if (isLoggedIn) {
             element.style.display = 'flex';
+        } else if (!isLoggedIn) {
+            element.style.display = 'none';
         }
     });
 

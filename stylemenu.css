@@ -16,10 +16,13 @@
 }
 
 .menuNav{
-  position: relative;
+  position: sticky;
+  top:0;
   display: block;
   width: 100%;
   list-style-type: none;
+  z-index: 500;
+  background-color: white;
 }
 
 .menuarea::-webkit-scrollbar-track {
@@ -38,7 +41,7 @@
 .menuNav ul li{
   position: relative;
   display: flex;
-  margin: 5px 35px;
+  margin: 5px 10px;
   width: 100%;
 }
 
